@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -21,8 +22,8 @@ public class ListItemsActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_readlist_items);
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_readlist_items);
         String listName = getIntent().getStringExtra("listName");
         setTitle(listName);
         ListView listView = findViewById(R.id.listViewItems);
@@ -47,11 +48,22 @@ public class ListItemsActivity extends AppCompatActivity {
             builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
 
             builder.show();
+            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
+
         });
+
+        ImageButton btnBack = findViewById(R.id.backButton);
+        btnBack.setOnClickListener(v2 -> {
+            getOnBackPressedDispatcher().onBackPressed();
+        });
+
         listView.setOnItemLongClickListener((parent, view, position, id) -> {
             items.remove(position);
             adapter.notifyDataSetChanged();
             return true;
         });
+
+
+
     }
 }
