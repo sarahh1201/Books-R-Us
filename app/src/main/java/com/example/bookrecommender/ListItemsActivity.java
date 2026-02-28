@@ -48,8 +48,6 @@ public class ListItemsActivity extends AppCompatActivity {
             builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
 
             builder.show();
-            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
-
         });
 
         ImageButton btnBack = findViewById(R.id.backButton);
