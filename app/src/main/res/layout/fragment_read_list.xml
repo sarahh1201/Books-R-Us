@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="640dp"
+        android:layout_marginBottom="620dp"
         android:text="Your Read Lists"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,6 +39,8 @@
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

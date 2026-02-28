@@ -39,4 +39,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="Back"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
