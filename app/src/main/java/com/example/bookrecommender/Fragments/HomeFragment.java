@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void setupRecyclerView() {
-        // Sets the scrolling to horizontal as per your sketch
+        // Sets the scrolling to horizontal
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
 

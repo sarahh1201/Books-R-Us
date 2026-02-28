@@ -31,10 +31,10 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
 
     @Override
     public int getItemCount() {
-        return numberOfItems; // Returns the number (6) we passed in earlier
+        return numberOfItems; // Returns the number 6.
     }
 
-    // This class finds the actual views inside item_book.xml
+    // This class finds the actual views inside item_book
     public static class BookViewHolder extends RecyclerView.ViewHolder {
         public BookViewHolder(@NonNull View itemView) {
             super(itemView);
