@@ -16,7 +16,7 @@ import com.example.bookrecommender.R;
 public class HomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private Button btnSearch, btnHistory;
+
 
     public HomeFragment() {
 
@@ -30,10 +30,10 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         recyclerView = view.findViewById(R.id.rv_current_books);
-        btnSearch = view.findViewById(R.id.btn_search);
+
 
         setupRecyclerView();
-        setupButtons();
+        //setupButtons();
 
         return view;
     }
@@ -48,17 +48,18 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(adapter);
     }
 
-    private void setupButtons() {
+   // Button Logic
+    // private void setupButtons() {
         // Search Button Logic
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+      //  btnSearch.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+         //   public void onClick(View v) {
                 // Placeholder action for search
-                Toast.makeText(getContext(), "Searching through current reads...", Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(getContext(), "Searching through current reads...", Toast.LENGTH_SHORT).show();
 
                 //update this when i learn how to link searches to available database
-            }
-        });
+        //    }
+     //   });
 
-    }
+ //   }
 }
